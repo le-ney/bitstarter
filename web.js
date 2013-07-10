@@ -1,7 +1,7 @@
+#!/usr/bin/env node
+var fs = require('fs');
 var express = require('express');
-
 var app = express.createServer(express.logger());
-
 var content = fs.readFileSync('index.html','utf8');
 app.get('/', function(request, response) {
   response.send(content);
